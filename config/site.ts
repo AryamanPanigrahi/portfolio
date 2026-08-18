@@ -7,19 +7,20 @@ export const siteConfig = {
   name: "Aryaman Panigrahi",
   title: "Software Engineer",
   tagline:
-    "CS undergrad specializing in Cybersecurity, building backend systems, AI evaluation tooling, and applied software projects in Python and React.",
+    "CS undergrad specializing in Cybersecurity, building full-stack systems (FastAPI, PostgreSQL, React), AI evaluation tooling, and applied software projects in Python.",
   shortIntro:
-    "Computer Science undergraduate at VIT Vellore focused on backend development, AI/LLM evaluation, and applied cybersecurity.",
+    "Computer Science undergraduate at VIT Vellore focused on full-stack development, AI/LLM evaluation, and applied cybersecurity.",
 
   // SEO — generic, software-development-role oriented
   seo: {
     title: "Aryaman Panigrahi | Software Engineer",
     description:
-      "Portfolio of Aryaman Panigrahi — Computer Science (Cybersecurity) undergraduate at VIT Vellore. Software engineering, backend development, AI/LLM evaluation, and Python/React projects. Open to Software Engineering, AI/ML, Backend, and Cybersecurity internships.",
+      "Portfolio of Aryaman Panigrahi — Computer Science (Cybersecurity) undergraduate at VIT Vellore. Full-stack development, AI/LLM evaluation, and Python/FastAPI/React projects, including DocVault. Open to Software Engineering, AI/ML, Backend, and Cybersecurity internships.",
     keywords: [
       "Aryaman Panigrahi",
       "Software Engineer",
       "Software Engineering Intern",
+      "Full-Stack Developer",
       "Backend Developer",
       "Python Developer",
       "VIT Vellore",
@@ -50,12 +51,13 @@ export const siteConfig = {
 
   about: {
     paragraphs: [
-      "I'm a Computer Science undergraduate at VIT Vellore, specializing in Cybersecurity, with a strong interest in backend development and applied AI. I like building systems end-to-end — from signal-processing pipelines in Python to deployed front-end applications in React.",
+      "I'm a Computer Science undergraduate at VIT Vellore, specializing in Cybersecurity, with a strong interest in backend development and applied AI. I like building systems end-to-end — my flagship project is DocVault, a full-stack document management platform I designed, built, and deployed on my own, from the FastAPI/PostgreSQL backend to the React frontend.",
       "Most recently, I worked on LLM safety evaluation during a cybersecurity-focused internship, designing adversarial test scenarios and helping validate AI guardrails. That experience shaped how I think about building software: correctness, edge cases, and security aren't an afterthought — they're part of the design.",
-      "Outside of coursework, I solve algorithmic problems on LeetCode, explore quantum computing fundamentals with Qiskit, and contribute to my university's Mozilla Firefox Club as a senior core member.",
+      "Outside of coursework, I solve algorithmic problems on LeetCode, explore quantum computing fundamentals with Qiskit, and contribute to my university's Mozilla Firefox Club as a junior core member.",
     ],
     focusAreas: [
       "Software Engineering",
+      "Full-Stack Development",
       "Backend Development",
       "Python & C++",
       "AI / LLM Evaluation",
@@ -79,6 +81,31 @@ export const siteConfig = {
   ],
 
   projects: [
+    {
+      name: "DocVault",
+      summary:
+        "A full-stack, self-hosted document management platform with OCR-powered search, built and deployed end-to-end.",
+      description:
+        "Designed and built a client-agnostic document management system to solve the problem of important documents (attachments, downloads, scans) being scattered across devices. FastAPI backend with JWT authentication (bcrypt password hashing), PostgreSQL via SQLAlchemy ORM with Alembic migrations, and S3-compatible object storage (MinIO in development, Backblaze B2 in production). Automatic OCR text extraction (Tesseract, with native PyMuPDF extraction for digital PDFs) powers full-text search across filenames and document content. The React, TypeScript, and Tailwind CSS frontend supports drag-and-drop/paste upload, sorting, soft-delete with a restore/trash flow, and inline document preview. Deployed end-to-end on Vercel, Render, and Neon.",
+      tech: [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "SQLAlchemy",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Docker",
+      ],
+      highlights: [
+        "Client-agnostic REST API with JWT auth (bcrypt) and Alembic-managed PostgreSQL schema",
+        "OCR-powered full-text search (Tesseract + PyMuPDF) over uploaded documents",
+        "S3-compatible object storage: MinIO in dev, Backblaze B2 in production",
+        "Deployed end-to-end: Vercel (frontend), Render (backend, Docker), Neon (Postgres)",
+      ],
+      github: "https://github.com/AryamanPanigrahi/DocVault",
+      demo: "https://doc-vault-jet-kappa.vercel.app",
+    },
     {
       name: "Acoustic Source Localization & Classification",
       summary:
@@ -111,14 +138,23 @@ export const siteConfig = {
   ],
 
   skills: {
-    Languages: ["Python", "C++", "C", "Java"],
-    Frameworks: ["React", "Qiskit"],
-    "Developer Tools": ["Git", "GitHub", "VS Code"],
+    Languages: ["Python", "C++", "C", "Java", "TypeScript"],
+    Frameworks: ["React", "FastAPI", "SQLAlchemy", "Tailwind CSS", "Qiskit"],
+    "Developer Tools": ["Git", "GitHub", "Docker", "VS Code"],
+    "Databases & Cloud": [
+      "PostgreSQL",
+      "MinIO",
+      "Backblaze B2 (Object Storage)",
+      "Render",
+      "Vercel",
+      "Neon",
+    ],
     Cybersecurity: [
       "Adversarial Prompt Testing",
       "LLM Guardrail Validation",
       "Security Risk Management",
       "AI Safety Evaluation",
+      "JWT Authentication (bcrypt)",
     ],
     "AI / ML": [
       "LLM Evaluation",
@@ -129,6 +165,7 @@ export const siteConfig = {
       "Data Structures & Algorithms",
       "Object-Oriented Programming",
       "Signal Processing",
+      "REST API Design",
       "Problem Solving",
     ],
   },
@@ -144,8 +181,9 @@ export const siteConfig = {
 
   achievements: [
     "Scored in the 91st percentile in JEE Mains",
-    "Solved 96+ problems on LeetCode",
+    "Solved 100+ problems on LeetCode",
     "Proposed 5 new adversarial test scenarios adopted into Tech Mahindra's LLM evaluation suite",
+    "Independently designed, built, and deployed DocVault end-to-end — backend, database, object storage, and frontend — across Render, Neon, Backblaze B2, and Vercel",
   ],
 
   certifications: [
@@ -168,7 +206,7 @@ export const siteConfig = {
   extraCurricular: [
     {
       org: "Mozilla Firefox Club, VIT",
-      role: "Senior Core Member",
+      role: "Junior Core Member",
       detail: "Active member contributing to club initiatives and technical community engagement.",
     },
   ],

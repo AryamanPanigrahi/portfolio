@@ -47,7 +47,7 @@ export function CodingProfiles() {
             </div>
             <div>
               <h3 className="text-sm font-semibold text-ink-900 dark:text-white">LeetCode</h3>
-              <p className="text-sm text-ink-500 dark:text-ink-400">96+ problems solved</p>
+              <p className="text-sm text-ink-500 dark:text-ink-400">100+ problems solved</p>
             </div>
           </div>
           <ArrowUpRight
